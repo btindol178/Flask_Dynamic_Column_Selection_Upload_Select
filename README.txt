@@ -11,3 +11,7 @@ Then download the new table with the new column made by multiplying another by 2
 		- Then it submits the calculated df to uploads/manipulated_exce and to the manipulated (sql alchemy database)
 		- redirects you and shows you data that has new column
 	- Then upon download you can get file 
+	
+	
+# Note need to create folder name templates
+# Need to create folder called uploads and in uploads a folder called excel_uploads and one called manipulated_excel
