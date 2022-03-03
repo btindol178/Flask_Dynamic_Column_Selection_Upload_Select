@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form action="/">
+        <label for="mylist">List Items:</label>
+        <select  name= columns method="GET|POST">
+            {% for listitem in your_list %}
+            <option value= "{{listitem}}" SELECTED>{{listitem}}</option>"
+            {% endfor %}
+        </select>
+        <input type="submit">
+      </form>
+
+    {% for your_list_element in your_list %}
+      <p>{{ your_list_element }} </p>
+  {% endfor %}
+</body>
+</html>

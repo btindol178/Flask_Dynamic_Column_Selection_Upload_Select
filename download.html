@@ -1,0 +1,16 @@
+<html>
+<head>
+<title>Download</title>
+</head>
+<body>
+    <h1>{{cols}}</h1>
+   <h1>hi column {{cols}} was selected</h1>
+   <div class="table-responsive-md">
+    {{ tables|safe }}
+</div>
+
+<form method = 'POST' class="d-inline-block ml-5" >
+    <input type="submit" value="Download File">
+</form>
+</body>
+</html>

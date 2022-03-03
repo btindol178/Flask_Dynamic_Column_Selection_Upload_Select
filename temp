@@ -1,0 +1,32 @@
+
+    <label for="users">Columns : </label>
+    <select name="users" id="users" onfocus="this.selectedIndex = -1;">
+      {% for col in cols %}
+      <option value="{{col}}">{{col}}</option>
+      {% endfor %}
+    </select>
+
+    action="{{ url_for('redownloaded_file', path=url)}}"
+
+
+
+    {{ form.hidden_tag() }}
+    <form class="d-inline-block ml-5"  action="{{ url_for('redownloaded_file', path=url)}}" >
+         <input type="submit" value="Download File">
+    </form>                                                                                                                                                                                                                                                                         
+    
+
+
+
+    <label for="mylist">Address Column:</label>
+        <select  name= columns method="GET|POST">
+            {% for col in cols %}
+            <option value= "{{col}}" SELECTED>{{col}}</option>"
+            {% endfor %}
+        </select>
+        <input type="submit" >
+
+
+        action="{{ url_for('download_manipulated', path=url)}}"
+
+        action="{{ url_for('download_manipulated')}}"

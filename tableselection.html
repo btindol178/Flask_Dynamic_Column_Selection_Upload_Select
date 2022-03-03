@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form class="" action="{{ url_for('redownloaded_file', path=url) }}" method = "GET|POST">
+    {{ form.hidden_tag() }}
+
+        <select  name= columns method="GET|POST">
+            {% for col in cols %}
+            <option value= "{{col}}" SELECTED>{{col}}</option>"
+            {% endfor %}
+        </select>
+        <label for="dog-names">Choose a dog name:</label>
+
+    </select>    
+</form>
+<div class="table-responsive-md">
+    {{ tables|safe }}
+</div>
+<ul>
+    {% for col in cols %}
+
+    <li>Column you had : {{ col }}</li>
+
+    {% endfor %}
+</ul>
+</body>
+</html>
+
+
+<html>
+<head>
+<title>Download</title>
+</head>
+<body>
+        {{ form.hidden_tag() }}
+    <form class="d-inline-block ml-5" action="{{ url_for('redownloaded_file', path=url) }}">
+         <input type="submit" value="Download File">
+    </form>
+    <script>
+        //var data = {{cols}}
+        //console.log(data)
+    </script>
+</body>
+</html>
